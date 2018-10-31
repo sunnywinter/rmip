@@ -1,0 +1,12 @@
+<launch>
+
+  <arg name="rviz" default="true" />
+
+  <group if="$(arg rviz)">
+    <include file="$(find rmip)/launch/rviz.launch" />
+  </group>
+
+  <node name="rmip" pkg="rmip" type="demo" output="screen">
+  </node>
+
+</launch>
